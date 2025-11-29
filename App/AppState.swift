@@ -1,38 +1,28 @@
-import SwiftUI
+import Foundation
 import Combine
 
 @MainActor
 final class AppState: ObservableObject {
-    @Published var isCheckingAuth = true
-    @Published var currentUser: EspritUser? = nil
-    @Published var token: String? = nil
 
-    init() {
-        Task { await checkExistingSession() }
-    }
+    static let shared = AppState()
 
-    func checkExistingSession() async {
-        if let stored = readToken() {
-            do {
-                let me = try await EspritAPI.shared.getMe(token: stored)
-                self.token = stored
-                self.currentUser = me
-            } catch {
-                deleteToken()
-            }
-        }
-        self.isCheckingAuth = false
-    }
+    @Published var currentUser: EspritUser?
+    @Published var token: String?
+    @Published var isAuthenticated: Bool = false
 
+    private init() {}
+
+    // SET SESSION après login
     func setSession(token: String, user: EspritUser) {
-        saveToken(token)
         self.token = token
         self.currentUser = user
+        self.isAuthenticated = true
     }
 
-    func logout() {
-        deleteToken()
+    // CLEAR SESSION pour logout
+    func clearSession() {
         self.token = nil
         self.currentUser = nil
+        self.isAuthenticated = false
     }
 }

@@ -1,18 +1,13 @@
-//
-//  ESPRITApp.swift
-//  Esprit Ios
-//
-//  Created by Mac de Mimi on 8/11/2025.
-//
 import SwiftUI
 
 @main
-struct ESPRITApp: App {
-    @StateObject private var appState = AppState()
+struct ESPRITIosApp: App {
+
+    @StateObject var appState = AppState.shared
 
     var body: some Scene {
         WindowGroup {
-            RootView()
+            RootView2()
                 .environmentObject(appState)
         }
     }
