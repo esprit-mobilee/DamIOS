@@ -9,16 +9,14 @@
 /* Begin PBXBuildFile section */
 		0A3D08502EBF915100863E17 /* ESPRITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3D084F2EBF915100863E17 /* ESPRITApp.swift */; };
 		0A3D08522EBF917500863E17 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3D08512EBF917500863E17 /* AppState.swift */; };
-		0A3D08542EBF91A500863E17 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3D08532EBF91A500863E17 /* RootView.swift */; };
-		0A3D08A82EBFA0B100863E17 /* RoleRouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3D08A02EBF981700863E17 /* RoleRouterView.swift */; };
+		A69AE1A62ED0D54300C27A5C /* RootView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69AE1A52ED0D53C00C27A5C /* RootView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A3D083B2EBF902800863E17 /* Esprit Ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Esprit Ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3D084F2EBF915100863E17 /* ESPRITApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESPRITApp.swift; sourceTree = "<group>"; };
 		0A3D08512EBF917500863E17 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		0A3D08532EBF91A500863E17 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		0A3D08A02EBF981700863E17 /* RoleRouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleRouterView.swift; sourceTree = "<group>"; };
+		A69AE1A52ED0D53C00C27A5C /* RootView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -26,6 +24,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				SplachView.swift,
+				SplashScreen.swift,
 			);
 			target = 0A3D083A2EBF902800863E17 /* Esprit Ios */;
 		};
@@ -37,66 +36,37 @@
 			);
 			target = 0A3D083A2EBF902800863E17 /* Esprit Ios */;
 		};
-		0A3D08AA2EBFA0BF00863E17 /* Exceptions for "Student" folder in "Esprit Ios" target */ = {
+		A69AE1B72ED0EF3200C27A5C /* Exceptions for "Messaging" folder in "Esprit Ios" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Application/ApplyForInternshipView.swift,
-				Application/EditApplicationView.swift,
-				Application/StudentApplicationDetailView.swift,
-				Application/StudentApplicationsViewModel.swift,
-				Clubs/StudentClubDetailView.swift,
-				Clubs/StudentClubsView.swift,
-				Event/StudentEventDetailView.swift,
-				Event/StudentEventsListView.swift,
-				Stages/StudentMyApplicationsForStageView.swift,
-				Stages/StudentStageDetailView.swift,
-				Stages/StudentstagesView.swift,
-				StudentHomeView.swift,
+				ChatMessageBubble.swift,
+				ChatView.swift,
+				ConversationRow.swift,
+				ConversationsView.swift,
+				ConversationViewModel.swift,
+				MessagingViewModel.swift,
+				Models/Announcement.swift,
+				Models/Conversation.swift,
+				Models/Message.swift,
 			);
 			target = 0A3D083A2EBF902800863E17 /* Esprit Ios */;
 		};
-		0A3D08D12EBFA73F00863E17 /* Exceptions for "Admin" folder in "Esprit Ios" target */ = {
+		A69AE1D02ED1CE4E00C27A5C /* Exceptions for "Home" folder in "Esprit Ios" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				AdminHomeView.swift,
-				Application/AdminApplicationDetailView.swift,
-				Application/AdminApplicationsListView.swift,
-				Club/AdminAddClubView.swift,
-				Club/AdminClubDetailView.swift,
-				Club/AdminClubsListView.swift,
-				Club/AdminEditClubView.swift,
-				Event/AdminAddEventView.swift,
-				Event/AdminEditEventView.swift,
-				Event/AdminEventsListView.swift,
-				Event/EventCard.swift,
-				Event/EventDetailView.swift,
-				Stages/AdminAddInternshipView.swift,
-				Stages/AdminEditInternshipView.swift,
-				Stages/AdminStageDetailView.swift,
-				Stages/AdminStagesView.swift,
-				Stages/InternshipCard.swift,
-				Stages/PhotosPickerButton.swift,
+				MainHomeView.swift,
 			);
 			target = 0A3D083A2EBF902800863E17 /* Esprit Ios */;
 		};
-		0A3D08D32EBFA74300863E17 /* Exceptions for "Parent" folder in "Esprit Ios" target */ = {
+		A69AE1D22ED1CE6700C27A5C /* Exceptions for "Annoucements" folder in "Esprit Ios" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				ParentHomeView.swift,
-			);
-			target = 0A3D083A2EBF902800863E17 /* Esprit Ios */;
-		};
-		0A3D08D52EBFA74700863E17 /* Exceptions for "Teacher" folder in "Esprit Ios" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				TeacherHomeView.swift,
-			);
-			target = 0A3D083A2EBF902800863E17 /* Esprit Ios */;
-		};
-		0A4195D02EC11DAC00316582 /* Exceptions for "Shared" folder in "Esprit Ios" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Internships/InternshipListViewModel.swift,
+				AnnouncementDetailView.swift,
+				AnnouncementsView.swift,
+				AnnouncementsViewModel.swift,
+				Components/AnnouncementCard.swift,
+				CreateAnnouncementView.swift,
+				EditAnnouncementView.swift,
 			);
 			target = 0A3D083A2EBF902800863E17 /* Esprit Ios */;
 		};
@@ -154,44 +124,28 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
-		0A3D088B2EBF952A00863E17 /* Student */ = {
+		A69AE1A92ED0E02900C27A5C /* Messaging */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				0A3D08AA2EBFA0BF00863E17 /* Exceptions for "Student" folder in "Esprit Ios" target */,
+				A69AE1B72ED0EF3200C27A5C /* Exceptions for "Messaging" folder in "Esprit Ios" target */,
 			);
-			path = Student;
+			path = Messaging;
 			sourceTree = "<group>";
 		};
-		0A3D088C2EBF953900863E17 /* Teacher */ = {
+		A69AE1B92ED0F73300C27A5C /* Home */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				0A3D08D52EBFA74700863E17 /* Exceptions for "Teacher" folder in "Esprit Ios" target */,
+				A69AE1D02ED1CE4E00C27A5C /* Exceptions for "Home" folder in "Esprit Ios" target */,
 			);
-			path = Teacher;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		0A3D088D2EBF954400863E17 /* Parent */ = {
+		A69AE1C92ED1CA7C00C27A5C /* Annoucements */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				0A3D08D32EBFA74300863E17 /* Exceptions for "Parent" folder in "Esprit Ios" target */,
+				A69AE1D22ED1CE6700C27A5C /* Exceptions for "Annoucements" folder in "Esprit Ios" target */,
 			);
-			path = Parent;
-			sourceTree = "<group>";
-		};
-		0A3D088E2EBF955000863E17 /* Admin */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				0A3D08D12EBFA73F00863E17 /* Exceptions for "Admin" folder in "Esprit Ios" target */,
-			);
-			path = Admin;
-			sourceTree = "<group>";
-		};
-		0A3D088F2EBF955C00863E17 /* Shared */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				0A4195D02EC11DAC00316582 /* Exceptions for "Shared" folder in "Esprit Ios" target */,
-			);
-			path = Shared;
+			path = Annoucements;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -231,8 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				0A3D084F2EBF915100863E17 /* ESPRITApp.swift */,
+				A69AE1A52ED0D53C00C27A5C /* RootView2.swift */,
 				0A3D08512EBF917500863E17 /* AppState.swift */,
-				0A3D08532EBF91A500863E17 /* RootView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -251,12 +205,9 @@
 		0A3D084C2EBF90BA00863E17 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				0A3D08A02EBF981700863E17 /* RoleRouterView.swift */,
-				0A3D088F2EBF955C00863E17 /* Shared */,
-				0A3D088E2EBF955000863E17 /* Admin */,
-				0A3D088D2EBF954400863E17 /* Parent */,
-				0A3D088C2EBF953900863E17 /* Teacher */,
-				0A3D088B2EBF952A00863E17 /* Student */,
+				A69AE1C92ED1CA7C00C27A5C /* Annoucements */,
+				A69AE1B92ED0F73300C27A5C /* Home */,
+				A69AE1A92ED0E02900C27A5C /* Messaging */,
 				0A3D088A2EBF951F00863E17 /* Splash */,
 				0A3D08892EBF950F00863E17 /* Auth */,
 			);
@@ -354,8 +305,7 @@
 			files = (
 				0A3D08502EBF915100863E17 /* ESPRITApp.swift in Sources */,
 				0A3D08522EBF917500863E17 /* AppState.swift in Sources */,
-				0A3D08A82EBFA0B100863E17 /* RoleRouterView.swift in Sources */,
-				0A3D08542EBF91A500863E17 /* RootView.swift in Sources */,
+				A69AE1A62ED0D54300C27A5C /* RootView2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

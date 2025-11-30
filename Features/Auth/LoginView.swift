@@ -10,10 +10,8 @@ struct LoginView: View {
             Color(.systemGray6).ignoresSafeArea()
 
             VStack(spacing: 24) {
-
                 Spacer(minLength: 20)
 
-                // logo
                 Image("esprit_logo")
                     .resizable()
                     .scaledToFit()
@@ -23,14 +21,18 @@ struct LoginView: View {
                     .font(.system(size: 16, weight: .medium))
                     .foregroundColor(.gray)
 
-                // champs
                 VStack(spacing: 16) {
-                    // identifiant
+
+                    // EMAIL
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Identifiant")
+                        Text("Email")
                             .font(.caption)
                             .foregroundColor(Color(#colorLiteral(red: 0.85, green: 0.16, blue: 0.12, alpha: 1)))
-                        TextField("", text: $vm.identifier)
+
+                        TextField("email@esprit.tn", text: $vm.email)
+                            .keyboardType(.emailAddress)
+                            .textInputAutocapitalization(.never)
+                            .autocorrectionDisabled()
                             .padding(12)
                             .background(.white)
                             .overlay(
@@ -39,21 +41,19 @@ struct LoginView: View {
                             )
                     }
 
-                    // mot de passe
+                    // PASSWORD
                     VStack(alignment: .leading, spacing: 4) {
                         Text("Mot de passe")
                             .font(.caption)
                             .foregroundColor(.gray)
+
                         HStack {
-                            Group {
-                                if showPassword {
-                                    TextField("", text: $vm.password)
-                                } else {
-                                    SecureField("", text: $vm.password)
-                                }
+                            if showPassword {
+                                TextField("••••••", text: $vm.password)
+                            } else {
+                                SecureField("••••••", text: $vm.password)
                             }
-                            .textInputAutocapitalization(.never)
-                            .autocorrectionDisabled()
+
                             Button {
                                 showPassword.toggle()
                             } label: {
@@ -71,7 +71,6 @@ struct LoginView: View {
                 }
                 .padding(.horizontal, 24)
 
-                // erreur
                 if let error = vm.errorMessage {
                     Text(error)
                         .foregroundColor(.red)
@@ -79,7 +78,6 @@ struct LoginView: View {
                         .padding(.horizontal, 24)
                 }
 
-                // bouton
                 Button {
                     Task {
                         await vm.login(appState: appState)
@@ -103,5 +101,5 @@ struct LoginView: View {
 
 #Preview {
     LoginView()
-        .environmentObject(AppState())
+        .environmentObject(AppState.shared)
 }
